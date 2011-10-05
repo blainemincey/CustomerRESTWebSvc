@@ -24,7 +24,7 @@ System Requirements
 
 Building the project
 ====================
-mvn clean war:war
+mvn clean compile war:war
 
 Creates --> target/CustomerRESTWebSvc.war
 
