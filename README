@@ -1,0 +1,48 @@
+Example REST Web Service to use as a data source for the
+JBoss Enterprise Data Services Platform (EDS)
+
+Revision History
+================
+1 - Blaine Mincey(blaine.mincey@redhat.com)  - Initial version.
+
+
+
+Overview
+========
+Simple JAX-RS/RESTEasy web service that exposes a GET 
+operation that reads in an XML file.  The purpose of
+this is to simply return a large (over 100 records) 
+dataset that can ultimately be used as a data source
+for a virtual data abstraction layer in EDS.
+
+
+System Requirements
+===================
+- Maven 2.x or higher
+- JDK 1.5.x or higher
+
+
+Building the project
+====================
+mvn clean war:war
+
+Creates --> target/CustomerRESTWebSvc.war
+
+This Maven command will 'clean' the workspace and then
+compile/build the WAR file that can be deployed to the
+EDS-P or a JBoss Application Server instance.  The WAR
+file will be in the 'target' directory.
+
+The WAR file can be deployed 'as-is' to a JBoss 5.x
+application server.  No other servers were tested
+for this example.
+
+Running the project and manually testing it
+===========================================
+The WAR file should be copied to the JBoss 'deploy'
+directory in order to be deployed to the application
+server instance.
+
+Open a browser at the following URL:
+
+http://localhost:8080/CustomerRESTWebSvc/MyRESTApplication/customerList
