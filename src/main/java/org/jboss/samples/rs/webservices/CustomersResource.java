@@ -9,6 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
+import javax.ws.rs.core.MediaType;
+
 /**
  * 
  * @author bmincey
@@ -25,7 +27,7 @@ public class CustomersResource
      */
     @GET
     @Path("customerList")
-    @Produces({ "application/xml" })
+    @Produces({ MediaType.APPLICATION_XML })
     public String getCustomerList()
     {
         System.out.println("*** Accessing /MyRESTApplication/customerList");
